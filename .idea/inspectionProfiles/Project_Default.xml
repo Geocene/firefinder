@@ -1,0 +1,37 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="14">
+            <item index="0" class="java.lang.String" itemvalue="pandas" />
+            <item index="1" class="java.lang.String" itemvalue="pandas-gbq" />
+            <item index="2" class="java.lang.String" itemvalue="certifi" />
+            <item index="3" class="java.lang.String" itemvalue="earthengine-api" />
+            <item index="4" class="java.lang.String" itemvalue="google-cloud-firestore" />
+            <item index="5" class="java.lang.String" itemvalue="requests" />
+            <item index="6" class="java.lang.String" itemvalue="urllib3" />
+            <item index="7" class="java.lang.String" itemvalue="boto3" />
+            <item index="8" class="java.lang.String" itemvalue="s3transfer" />
+            <item index="9" class="java.lang.String" itemvalue="botocore" />
+            <item index="10" class="java.lang.String" itemvalue="typing-extensions" />
+            <item index="11" class="java.lang.String" itemvalue="subtidal-binary-parser" />
+            <item index="12" class="java.lang.String" itemvalue="tlf-binary-parser" />
+            <item index="13" class="java.lang.String" itemvalue="boxsdk" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="bhp.collect.ghgsat.collect" />
+          <option value="bhp.collect.carbon_mapper.collect.collect_carbon_mapper" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="TsLint" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>

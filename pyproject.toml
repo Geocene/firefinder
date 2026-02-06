@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "firefinder"
+version = "0.1.0"
+description = "FireFinder+ event detection"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Geocene" },
+]
+dependencies = [
+  "pandas>=1.5",
+  "numpy>=1.23",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7",
+]
+
+[tool.setuptools]
+packages = ["firefinder"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
