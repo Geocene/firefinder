@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def events_from_boolean(df, *, timestamp_col="timestamp", event_col="event"):
+def group_events(df, *, timestamp_col="timestamp", event_col="event"):
     """
     Convert a boolean event column into start/stop intervals.
     Mirrors the event extraction logic from the original lambda processor.

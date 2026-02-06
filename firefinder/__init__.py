@@ -12,7 +12,7 @@ from .preprocess import (
     DEFAULT_SENSORS,
     SENTINEL_VALUE,
 )
-from .events import events_from_boolean
+from .events import group_events
 
 __all__ = [
     "fire_detector_v2",
@@ -25,7 +25,7 @@ __all__ = [
     "filter_sensor_data",
     "DEFAULT_SENSORS",
     "SENTINEL_VALUE",
-    "events_from_boolean",
+    "group_events",
 ]
 
 __version__ = "0.1.0"

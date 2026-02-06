@@ -1,8 +1,16 @@
 # firefinder
 
-A small, standalone FireFinder+ implementation with the same core logic used in the lambda processor, plus lightweight preprocessing helpers.
+A small, standalone FireFinder+ implementation with the same core logic used in at Geocene, plus lightweight preprocessing helpers.
+
+![FireFinder+ Events](cooking_img.png)
 
 ## Install
+
+From PyPI:
+
+```bash
+pip install firefinder
+```
 
 Local editable install while developing:
 
@@ -14,13 +22,27 @@ pip install -e .
 
 ```python
 import pandas as pd
-from firefinder import prepare_timeseries, fire_detector_v2, events_from_boolean
+from firefinder import prepare_timeseries, fire_detector_v2, group_events
 
 df = pd.read_csv("metrics.csv")
 df = prepare_timeseries(df, correction="false")
 df = fire_detector_v2(df)
 
-events = events_from_boolean(df)
+events = group_events(df)
+print(events.head())
+```
+
+If your timestamps are epoch milliseconds:
+
+```python
+import pandas as pd
+from firefinder import prepare_timeseries, fire_detector_v2, group_events
+
+df = pd.read_json("data.json")
+df["timestamp"] = pd.to_datetime(df["timestamp"], unit="ms", utc=True, errors="coerce")
+df = prepare_timeseries(df, correction="false")
+df = fire_detector_v2(df)
+events = group_events(df)
 print(events.head())
 ```
 
@@ -36,7 +58,6 @@ python -m pytest
 - `timestamp`
 - `value`
 - `sensor_type_id` (required if `correction="true"`)
-- `mission_id` (required if `correction="true"` for ambient correction)
 
 ## Notes
 
